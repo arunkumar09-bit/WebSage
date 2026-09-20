@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AI Browser Copilot</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="popup">
+      <header>
+        <h1>AI Browser Copilot</h1>
+        <span id="status" class="status">Ready</span>
+      </header>
+
+      <label for="mode">Mode</label>
+      <select id="mode">
+        <option value="summarize">Summarize</option>
+        <option value="explain">Explain</option>
+        <option value="hint">Hint</option>
+        <option value="improve">Improve</option>
+      </select>
+
+      <button id="run" type="button">Run</button>
+
+      <div id="activity" class="activity" hidden>
+        <span class="spinner" aria-hidden="true"></span>
+        <span id="activityText">Thinking...</span>
+      </div>
+
+      <section id="result" class="result" aria-live="polite"></section>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
